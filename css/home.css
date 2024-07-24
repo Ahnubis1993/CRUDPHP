@@ -1,0 +1,187 @@
+/* Estilos generales */
+
+body {
+    background-image: url('../images/fondoHome.jpg');
+    background-size: cover;
+    margin-top: 70px; /* Ajustar margen superior para dejar espacio para la barra de navegación */
+    font-family: Arial, sans-serif; /* Cambiar la fuente según tus preferencias */
+}
+
+.navbar {
+    background-color: #ffffff; /* Color de fondo de la barra de navegación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar .btn-primary {
+    background-color: #007bff; /* Color de fondo del botón "Añadir" */
+    border-color: #007bff; /* Color del borde del botón "Añadir" */
+}
+
+.navbar .btn-primary:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para la tabla */
+.table {
+    border-collapse: collapse; /* Colapso de bordes */
+    width: 100%; /* Ancho completo */
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd; /* Borde de 1px sólido */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+}
+
+.table th {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+}
+
+/* Cambio de color al pasar el ratón */
+.table tbody tr:hover {
+    background-color: #f2f2f2; 
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 220px; /* Ancho del menú lateral */
+    background-color: #45a049; /* Color de fondo del menú lateral */
+    padding-top: 70px; /* Ajuste para dejar espacio para la barra de navegación */
+    position: fixed;
+    height: 100%;
+    overflow-y: auto; /* Desplazamiento si el contenido excede el área visible */
+    left: 0;
+    top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+    background-color: #3e8e41; /* Cambio de color al pasar el ratón */
+}
+
+.options-container {
+    width: calc(100% - 220px); /* Restar el ancho del menú lateral */
+    margin-left: 220px; /* Ajuste para dejar espacio para el menú lateral */
+    padding-top: 70px; /* Ajuste para dejar espacio para la barra de navegación */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .options-container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        left: auto; /* Restaurar posición del menú lateral en dispositivos móviles */
+    }
+}
+
+/* Estilos para el formulario de modificación */
+
+#formularioModificacionProfesor,
+#formularioModificacionAlumno {
+    background-color: #ffffff; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: fixed; /* Fijar posición */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar */
+    z-index: 1000; /* Capa superior */
+    display: none; /* Ocultar inicialmente */
+}
+
+#formularioModificacionProfesor h2,
+#formularioModificacionAlumno h2 {
+    text-align: center; /* Centrar texto */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+#formularioModificacionProfesor form,
+#formularioModificacionAlumno form {
+    width: 300px; /* Ancho del formulario */
+    margin: 0 auto; /* Centrar */
+}
+
+#formularioModificacionProfesor label,
+#formularioModificacionAlumno label {
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+#formularioModificacionProfesor input,
+#formularioModificacionAlumno input {
+    width: 100%; /* Ancho completo */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 10px; /* Margen inferior */
+    box-sizing: border-box; /* Incluir borde y relleno en el ancho */
+}
+
+#formularioModificacionProfesor button,
+#formularioModificacionAlumno button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor */
+}
+
+#formularioModificacionProfesor button:hover,
+#formularioModificacionAlumno button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+#formularioModificacionProfesor .btn-secondary,
+#formularioModificacionAlumno .btn-secondary {
+    background-color: #ccc; /* Color de fondo */
+    color: #333; /* Color de texto */
+}
+
+#formularioModificacionProfesor .btn-secondary:hover,
+#formularioModificacionAlumno .btn-secondary:hover {
+    background-color: #999; /* Cambio de color al pasar el ratón */
+}
+
+.formulario {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Para que aparezcan encima de la tabla */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
